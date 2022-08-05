@@ -2,6 +2,12 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
+    "api-http-article": "libs/api/http/article",
+    "api-http-profile": "libs/api/http/profile",
+    "api-http-tag": "libs/api/http/tag",
+    "api-http-user": "libs/api/http/user",
+    "api-migrations": "libs/api/migrations",
+    "api-shared": "libs/api/shared",
     "models": "libs/models",
     "web": "apps/web",
     "web-core": "libs/web/core",

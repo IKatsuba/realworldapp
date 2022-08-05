@@ -14,6 +14,12 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
     "paths": {
+      "@app/api/http/article": ["libs/api/http/article/src/index.ts"],
+      "@app/api/http/profile": ["libs/api/http/profile/src/index.ts"],
+      "@app/api/http/tag": ["libs/api/http/tag/src/index.ts"],
+      "@app/api/http/user": ["libs/api/http/user/src/index.ts"],
+      "@app/api/migrations": ["libs/api/migrations/src/index.ts"],
+      "@app/api/shared": ["libs/api/shared/src/index.ts"],
       "@app/models": ["libs/models/src/index.ts"],
       "@app/web/core": ["libs/web/core/src/index.ts"],
       "@app/web/pages/article": ["libs/web/pages/article/src/index.ts"],

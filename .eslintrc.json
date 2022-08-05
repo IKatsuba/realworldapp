@@ -42,7 +42,7 @@
           "error",
           {
             "enforceBuildableLibDependency": true,
-            "allow": [],
+            "allow": ["@app/api/http/user", "@app/api/http/article"],
             "depConstraints": [
               {
                 "sourceTag": "*",

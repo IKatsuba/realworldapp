@@ -8,16 +8,12 @@ import { LoadStrategy, MikroORM } from '@mikro-orm/core';
 import { MikroOrmMiddleware, MikroOrmModule } from '@mikro-orm/nestjs';
 
 import { AppController } from './app.controller';
-import { ArticleModule } from './article/article.module';
-import { ProfileModule } from './profile/profile.module';
-import { TagModule } from './tag/tag.module';
-import { UserModule } from './user/user.module';
+import { Article, ArticleModule, Comment } from '@app/api/http/article';
+import { ProfileModule } from '@app/api/http/profile';
+import { Tag, TagModule } from '@app/api/http/tag';
+import { User, UserModule } from '@app/api/http/user';
 import { SqlHighlighter } from '@mikro-orm/sql-highlighter';
-import { User } from './user/user.entity';
-import { Tag } from './tag/tag.entity';
-import { Comment } from './article/comment.entity';
-import { Article } from './article/article.entity';
-import { Migration20211219155639 } from './migrations/Migration20211219155639';
+import { Migration20211219155639 } from '@app/api/migrations';
 
 @Module({
   controllers: [AppController],
