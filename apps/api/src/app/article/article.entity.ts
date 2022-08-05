@@ -13,9 +13,10 @@ import slug from 'slug';
 
 import { User } from '../user/user.entity';
 import { Comment } from './comment.entity';
+import { ArticleModel } from '@app/models';
 
 @Entity()
-export class Article {
+export class Article implements ArticleModel {
   @PrimaryKey()
   id: number;
 

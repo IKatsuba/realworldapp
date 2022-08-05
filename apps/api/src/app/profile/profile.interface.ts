@@ -1,9 +1,6 @@
-export interface IProfileData {
-  username: string;
-  bio: string;
-  image?: string;
-  following?: boolean;
-}
+import { ProfileModel } from '@app/models';
+
+export interface IProfileData extends ProfileModel {}
 
 export interface IProfileRO {
   profile: IProfileData;

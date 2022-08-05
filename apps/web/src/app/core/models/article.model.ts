@@ -1,14 +1,7 @@
-import { Profile } from './profile.model';
+import { ArticleModel } from '@app/models';
 
-export interface Article {
-  slug: string;
-  title: string;
-  description: string;
-  body: string;
-  tagList: string[];
+export interface Article extends ArticleModel {
   createdAt: string;
   updatedAt: string;
   favorited: boolean;
-  favoritesCount: number;
-  author: Profile;
 }

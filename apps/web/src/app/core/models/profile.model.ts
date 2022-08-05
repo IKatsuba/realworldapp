@@ -1,6 +1,3 @@
-export interface Profile {
-  username: string;
-  bio: string;
-  image: string;
-  following: boolean;
-}
+import { ProfileModel } from '@app/models';
+
+export interface Profile extends ProfileModel {}

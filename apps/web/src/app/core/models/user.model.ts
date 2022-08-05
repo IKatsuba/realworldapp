@@ -1,7 +1,5 @@
-export interface User {
-  email: string;
+import { UserModel } from '@app/models';
+
+export interface User extends UserModel {
   token: string;
-  username: string;
-  bio: string;
-  image: string;
 }
