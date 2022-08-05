@@ -14,7 +14,9 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
     "paths": {
-      "@app/models": ["libs/models/src/index.ts"]
+      "@app/models": ["libs/models/src/index.ts"],
+      "@app/web/core": ["libs/web/core/src/index.ts"],
+      "@app/web/shared": ["libs/web/shared/src/index.ts"]
     },
     "baseUrl": ".",
     "rootDir": "."

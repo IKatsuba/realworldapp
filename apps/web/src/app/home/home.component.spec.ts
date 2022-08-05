@@ -8,7 +8,8 @@ import {
   ArticleListComponent,
   ListErrorsComponent,
   ShowAuthedDirective,
-} from '../shared';
+} from '@app/web/shared';
+import { ENVIRONMENT } from '@app/web/core';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -26,6 +27,12 @@ describe('HomeComponent', () => {
         ListErrorsComponent,
         ArticleListComponent,
         ShowAuthedDirective,
+      ],
+      providers: [
+        {
+          provide: ENVIRONMENT,
+          useValue: { api_url: '' },
+        },
       ],
     }).compileComponents();
 

@@ -8,7 +8,8 @@ import {
   FooterComponent,
   HeaderComponent,
   ShowAuthedDirective,
-} from './shared';
+} from '@app/web/shared';
+import { ENVIRONMENT } from '@app/web/core';
 describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
@@ -25,6 +26,12 @@ describe('AppComponent', () => {
         HeaderComponent,
         FooterComponent,
         ShowAuthedDirective,
+      ],
+      providers: [
+        {
+          provide: ENVIRONMENT,
+          useValue: { api_url: '' },
+        },
       ],
     }).compileComponents();
 

@@ -7,7 +7,7 @@ import {
 } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { Article, ArticlesService, UserService } from '../core';
+import { Article, ArticlesService, UserService } from '@app/web/core';
 import { catchError } from 'rxjs/operators';
 
 @Injectable({

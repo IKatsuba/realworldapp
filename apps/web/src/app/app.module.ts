@@ -4,9 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { HomeModule } from './home/home.module';
-import { FooterComponent, HeaderComponent, SharedModule } from './shared';
+import {
+  FooterComponent,
+  HeaderComponent,
+  SharedModule,
+} from '@app/web/shared';
 import { AppRoutingModule } from './app-routing.module';
-import { CoreModule } from './core/core.module';
+import { CoreModule } from '@app/web/core';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
@@ -14,7 +18,7 @@ import { environment } from '../environments/environment';
   declarations: [AppComponent, FooterComponent, HeaderComponent],
   imports: [
     BrowserModule,
-    CoreModule,
+    CoreModule.forRoot(environment),
     SharedModule,
     HomeModule,
     AuthModule,

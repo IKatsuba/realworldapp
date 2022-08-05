@@ -4,7 +4,8 @@ import { EditorComponent } from './editor.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ListErrorsComponent } from '../shared';
+import { ListErrorsComponent } from '@app/web/shared';
+import { ENVIRONMENT } from '@app/web/core';
 
 describe('EditorComponent', () => {
   let component: EditorComponent;
@@ -18,6 +19,12 @@ describe('EditorComponent', () => {
         ReactiveFormsModule,
       ],
       declarations: [EditorComponent, ListErrorsComponent],
+      providers: [
+        {
+          provide: ENVIRONMENT,
+          useValue: { api_url: '' },
+        },
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(EditorComponent);

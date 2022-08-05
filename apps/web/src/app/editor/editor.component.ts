@@ -11,7 +11,7 @@ import {
 } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Article, ArticlesService } from '../core';
+import { Article, ArticlesService } from '@app/web/core';
 
 @Component({
   selector: 'app-editor-page',

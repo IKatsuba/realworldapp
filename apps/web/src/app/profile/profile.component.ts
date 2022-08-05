@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { User, UserService, Profile } from '../core';
+import { User, UserService, Profile } from '@app/web/core';
 import { concatMap, tap } from 'rxjs/operators';
 
 @Component({

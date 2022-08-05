@@ -14,7 +14,7 @@ import {
   CommentsService,
   User,
   UserService,
-} from '../core';
+} from '@app/web/core';
 
 @Component({
   selector: 'app-article-page',

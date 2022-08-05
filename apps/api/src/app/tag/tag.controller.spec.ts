@@ -1,10 +1,14 @@
-import config from '../mikro-orm.config';
 import { Test } from '@nestjs/testing';
-import { MikroOrmModule } from '@mikro-orm/nestjs'
+import { MikroOrmModule } from '@mikro-orm/nestjs';
 import { TagController } from './tag.controller';
 import { Tag } from './tag.entity';
 import { TagService } from './tag.service';
-import { MikroORM } from '@mikro-orm/core';
+import { LoadStrategy, MikroORM } from '@mikro-orm/core';
+import { User } from '../user/user.entity';
+import { Comment } from '../article/comment.entity';
+import { Article } from '../article/article.entity';
+import { SqlHighlighter } from '@mikro-orm/sql-highlighter';
+import { Migration20211219155639 } from '../migrations/Migration20211219155639';
 
 describe('TagController', () => {
   let tagController: TagController;
@@ -13,7 +17,30 @@ describe('TagController', () => {
 
   beforeEach(async () => {
     const module = await Test.createTestingModule({
-      imports: [MikroOrmModule.forRoot(config), MikroOrmModule.forFeature({ entities: [Tag] })],
+      imports: [
+        MikroOrmModule.forRoot({
+          type: 'mysql' as const,
+          host: 'localhost',
+          port: 3306,
+          user: 'root',
+          password: '',
+          dbName: 'realworld',
+          entities: [User, Tag, Comment, Article],
+          debug: true,
+          loadStrategy: LoadStrategy.JOINED,
+          highlighter: new SqlHighlighter(),
+          registerRequestContext: false,
+          migrations: {
+            migrationsList: [
+              {
+                name: 'Migration20211219155639.ts',
+                class: Migration20211219155639,
+              },
+            ],
+          },
+        }),
+        MikroOrmModule.forFeature({ entities: [Tag] }),
+      ],
       controllers: [TagController],
       providers: [TagService],
     }).compile();

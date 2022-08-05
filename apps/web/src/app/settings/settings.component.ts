@@ -7,7 +7,7 @@ import {
 import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { User, UserService } from '../core';
+import { User, UserService } from '@app/web/core';
 
 @Component({
   selector: 'app-settings-page',

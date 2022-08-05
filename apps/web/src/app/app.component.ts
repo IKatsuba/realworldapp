@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
-import { UserService } from './core';
+import { UserService } from '@app/web/core';
 
 @Component({
   selector: 'app-root',

@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx run-many --target serve --projects=web,api"
+    "start": "nx run-many --target serve --projects=web,api",
+    "postinstall": "ngcc --properties es2020 browser module main"
   },
   "private": true,
   "dependencies": {

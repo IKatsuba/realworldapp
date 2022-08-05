@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { ArticleListConfig, Profile } from '../core';
+import { ArticleListConfig, Profile } from '@app/web/core';
 
 @Component({
   selector: 'app-profile-articles',

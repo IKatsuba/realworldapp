@@ -4,6 +4,7 @@ import { ArticleCommentComponent } from './article-comment.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { MarkdownPipe } from './markdown.pipe';
+import { ENVIRONMENT } from '@app/web/core';
 
 describe('ArticleCommentComponent', () => {
   let component: ArticleCommentComponent;
@@ -13,6 +14,12 @@ describe('ArticleCommentComponent', () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule, HttpClientTestingModule],
       declarations: [ArticleCommentComponent, MarkdownPipe],
+      providers: [
+        {
+          provide: ENVIRONMENT,
+          useValue: { api_url: '' },
+        },
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ArticleCommentComponent);

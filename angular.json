@@ -3,6 +3,8 @@
   "projects": {
     "api": "apps/api",
     "models": "libs/models",
-    "web": "apps/web"
+    "web": "apps/web",
+    "web-core": "libs/web/core",
+    "web-shared": "libs/web/shared"
   }
 }

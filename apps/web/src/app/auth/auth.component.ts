@@ -12,7 +12,7 @@ import {
 } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Errors, UserService } from '../core';
+import { Errors, UserService } from '@app/web/core';
 
 @Component({
   selector: 'app-auth-page',

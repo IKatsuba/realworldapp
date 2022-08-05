@@ -7,7 +7,7 @@ import {
 } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { Profile, ProfilesService } from '../core';
+import { Profile, ProfilesService } from '@app/web/core';
 import { catchError } from 'rxjs/operators';
 
 @Injectable({
