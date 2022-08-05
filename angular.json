@@ -5,6 +5,12 @@
     "models": "libs/models",
     "web": "apps/web",
     "web-core": "libs/web/core",
+    "web-pages-article": "libs/web/pages/article",
+    "web-pages-auth": "libs/web/pages/auth",
+    "web-pages-editor": "libs/web/pages/editor",
+    "web-pages-home": "libs/web/pages/home",
+    "web-pages-profile": "libs/web/pages/profile",
+    "web-pages-settings": "libs/web/pages/settings",
     "web-shared": "libs/web/shared"
   }
 }

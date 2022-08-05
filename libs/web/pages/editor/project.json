@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/web/pages/editor/src",
+  "prefix": "app",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/web/pages/editor"],
+      "options": {
+        "jestConfig": "libs/web/pages/editor/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/web/pages/editor/**/*.ts",
+          "libs/web/pages/editor/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

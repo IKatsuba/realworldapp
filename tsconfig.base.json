@@ -16,6 +16,12 @@
     "paths": {
       "@app/models": ["libs/models/src/index.ts"],
       "@app/web/core": ["libs/web/core/src/index.ts"],
+      "@app/web/pages/article": ["libs/web/pages/article/src/index.ts"],
+      "@app/web/pages/auth": ["libs/web/pages/auth/src/index.ts"],
+      "@app/web/pages/editor": ["libs/web/pages/editor/src/index.ts"],
+      "@app/web/pages/home": ["libs/web/pages/home/src/index.ts"],
+      "@app/web/pages/profile": ["libs/web/pages/profile/src/index.ts"],
+      "@app/web/pages/settings": ["libs/web/pages/settings/src/index.ts"],
       "@app/web/shared": ["libs/web/shared/src/index.ts"]
     },
     "baseUrl": ".",

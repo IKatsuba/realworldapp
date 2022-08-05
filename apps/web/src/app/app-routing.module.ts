@@ -6,22 +6,22 @@ const routes: Routes = [
   {
     path: 'settings',
     loadChildren: () =>
-      import('./settings/settings.module').then((m) => m.SettingsModule),
+      import('@app/web/pages/settings').then((m) => m.SettingsModule),
   },
   {
     path: 'profile',
     loadChildren: () =>
-      import('./profile/profile.module').then((m) => m.ProfileModule),
+      import('@app/web/pages/profile').then((m) => m.ProfileModule),
   },
   {
     path: 'editor',
     loadChildren: () =>
-      import('./editor/editor.module').then((m) => m.EditorModule),
+      import('@app/web/pages/editor').then((m) => m.EditorModule),
   },
   {
     path: 'article',
     loadChildren: () =>
-      import('./article/article.module').then((m) => m.ArticleModule),
+      import('@app/web/pages/article').then((m) => m.ArticleModule),
   },
 ];
 
